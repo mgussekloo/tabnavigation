@@ -10,8 +10,7 @@ This extension for Symphony CMS enables tabs in the main menu in the backend. Us
 Installation and Setup
 ----------------------
 
-1. Upload the `tabnavigation` folder in this archive to your Symphony
-   'extensions' folder.
+1. Upload the contents of this archive to a folder named 'tabnavigation' in your Symphony 'extensions' folder.
 
 2. Go to the Extensions-page in Symphony CMS and enable Tabnavigation.
 
