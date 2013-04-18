@@ -111,8 +111,6 @@ Class extension_tabnavigation extends Extension
 			&& Administration::instance() instanceof Administration
 			&& Administration::instance()->Page instanceof HTMLPage) {
 
-			$navigation = Administration::instance()->Page->getNavigationArray();
-
 			$tabs = self::getTabs();
 
 			$slugs = array();
