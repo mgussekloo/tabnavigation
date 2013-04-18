@@ -1,0 +1,54 @@
+nav#tabnavigation {
+    -moz-box-sizing: border-box;
+    background-color: #282828;
+    display: block;
+    float: left;
+    font-size: 12px;
+    list-style: none outside none;
+    margin: 0px;
+    min-height: 31px;
+    padding: 8px 8px 0px;
+    width: 100%;
+    z-index: 3;
+
+}
+#tabnavigation ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#tabnavigation.wide ul.structure {
+    float: right;
+}
+#tabnavigation > ul > li {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    color: #555555;
+    cursor: default;
+    display: block;
+    float: left;
+    height: 31px;
+    line-height: 31px;
+    padding: 0 10px;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    white-space: nowrap;
+    z-index: 3;
+}
+#tabnavigation > ul > li:hover, #tabnavigation > ul > li.active {
+    height: 31px;
+    text-shadow: none;
+    z-index: 10000;
+
+    background-color: #EFEFED;
+    border-radius: 4px 4px 0px 0px;
+ 	box-shadow: 0px -1px 1px #A9A9A9;
+}
+
+#tabnavigation > ul > li:hover > a, #tabnavigation > ul > li.active > a {
+	color: #555555;
+}
+
+#tabnavigation > ul > li > a {
+	color: white;
+}

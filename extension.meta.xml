@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="tabnavigation" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Tabnavigation</name>
+	<description>Back-end navigation with tabs for Symphony CMS</description>
+	<repo type="github">http://www.github.com/mgussekloo/Tabnavigation</repo>
+	<authors>
+		<author>
+			<name>Martijn Gussekloo</name>
+			<website>http://www.stylishmedia.com</website>
+		</author>
+	</authors>
+	<releases>
+		<release version="0.1" date="2013-01-01" min="2.3.2"/>
+	</releases>
+</extension>
