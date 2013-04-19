@@ -14,7 +14,7 @@ var tabnavigationActivate = function(tabnavigationConfiguration) {
 	$(container).insertBefore("nav#nav").html(ul);
 
 	// the active tab
-	var activeTab = false;;
+	var activeTab = false;
 
 	// prepare classes for groups
 	$("#nav ul>li").each(function() {
@@ -28,7 +28,7 @@ var tabnavigationActivate = function(tabnavigationConfiguration) {
 		if (className) {
 			$(this).addClass(className);
 			if (!activeTab && $(this).is(".active")) {
-				activeTab = className;
+				activeTab = (className.split(" "))[0];
 			}
 		}
 	});
@@ -43,7 +43,7 @@ var tabnavigationActivate = function(tabnavigationConfiguration) {
 	});
 
 	if (activeTab) {
-		$("#tabnavigation a.tabnavigation-" + activeTab).trigger("click");
+		$("#tabnavigation a." + activeTab).trigger("click");
 	} else {
 		$("#tabnavigation a").eq(0).trigger("click");
 	}
