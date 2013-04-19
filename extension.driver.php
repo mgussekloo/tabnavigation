@@ -128,8 +128,12 @@ Class extension_tabnavigation extends Extension
 			$groupsPerTab = self::getGroupsPerTab();
 			foreach ($groupsPerTab as $tabId => $groupNames)  {
 				foreach ($groupNames as $name) {
-					$groups[$name] = self::slug($tabs[$tabId]);
+					if (!isset($groups[$name])) $groups[$name] = array();
+					$groups[$name][] = 'tabnavigation-' . self::slug($tabs[$tabId]);
 				}
+			}
+			foreach ($groups as $name => $slugs) {
+				$groups[$name] = implode(' ', $slugs);
 			}
 			$jsConfig['groups'] = $groups;
 
@@ -146,7 +150,12 @@ Class extension_tabnavigation extends Extension
 	public static function getTabs() {
 		$settings = Symphony::Configuration()->get('tabnavigation');
 		if ($settings['tabs'] == '') return array();
-		return $tabs = explode(',', $settings['tabs']);
+		$tabs = explode(',', $settings['tabs']);
+		$out = array();
+		foreach ($tabs as $tab) {
+			$out[] = trim($tab);
+		}
+		return $out;
 	}
 
 	public static function getGroupsPerTab() {

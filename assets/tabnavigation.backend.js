@@ -3,7 +3,7 @@ var tabnavigationActivate = function(tabnavigationConfiguration) {
 
 	var container = $("<nav id='tabnavigation' class='wide'></nav>");
 	var ul = $("<ul class='content'></ul>");
-console.log(tabnavigationConfiguration);
+
 	if (tabnavigationConfiguration.tabs.length <= 0) return;
 
 	for (var x=0;x<tabnavigationConfiguration.tabs.length;x++) {
@@ -26,7 +26,7 @@ console.log(tabnavigationConfiguration);
 		content = content.trim();
 		var className = tabnavigationConfiguration.groups[content];
 		if (className) {
-			$(this).addClass("tabnavigation-" + className);
+			$(this).addClass(className);
 			if (!activeTab && $(this).is(".active")) {
 				activeTab = className;
 			}
