@@ -6,40 +6,51 @@ var tabnavigationActivate = function(tabnavigationConfiguration) {
 
 	if (tabnavigationConfiguration.tabs.length <= 0) return;
 
-	for (var x=0;x<tabnavigationConfiguration.tabs.length;x++) {
-		var tabName = tabnavigationConfiguration.tabs[x], slugName = tabnavigationConfiguration.slugs[x];
-		$(ul).append("<li><a href='#" + slugName + "' class='tabnavigation-" + slugName + "'>" + tabName + "</a></li>");
-	}
-
-	$(container).insertBefore("nav#nav").html(ul);
-
 	// the active tab
-	var activeTab = false;
+	var activeTab = false, unorderedGroups = [];
 
-	// prepare classes for groups
-	$("#nav ul>li").each(function() {
-		var content = $(this).html();
+	// set classes for groups
+	var navItems = $("#nav>ul.content>li");
+	for (var x=0,max=navItems.length;x<max;x++) {
+		var navItem = $(navItems[x]);
+		var content = navItem.html();
 		var cutoffIndex = content.indexOf("<ul");
 		if (cutoffIndex > 0) {
 			content = content.substr(0, cutoffIndex);
 		}
 		content = content.trim();
+
 		var className = tabnavigationConfiguration.groups[content];
 		if (className) {
-			$(this).addClass(className);
-			if (!activeTab && $(this).is(".active")) {
+			navItem.addClass(className);
+			if (!activeTab && navItem.is(".active")) {
 				activeTab = (className.split(" "))[0];
 			}
+		} else {
+			navItem.addClass("tabnavigation-_unsorted");
+			unorderedGroups.push(content);
 		}
-	});
+	};
 
+	// orphaned groups
+	if (unorderedGroups.length) {
+		tabnavigationConfiguration.tabs.push('Unsorted');
+		tabnavigationConfiguration.slugs.push('_unsorted');
+	}
 
+	// create tabs
+	for (var x=0;x<tabnavigationConfiguration.tabs.length;x++) {
+		var tabName = tabnavigationConfiguration.tabs[x], slugName = tabnavigationConfiguration.slugs[x];
+		$(ul).append("<li><a href='#" + slugName + "' class='tabnavigation-" + slugName + "'>" + tabName + "</a></li>");
+	}
+	$(container).insertBefore("nav#nav").html(ul);
+
+	// events
 	$("body").on("click.tabnavigation", "#tabnavigation a", function(e) {
 		e.preventDefault();
-		$("#tabnavigation li.active").removeClass("active"); $(this).parent().addClass("active");
-
+		$("#tabnavigation>ul>li.active").removeClass("active"); $(this).parent().addClass("active");
 		var tabName = $(this).attr("href").replace("#", "");
-		$("#nav>ul>li").hide().filter(".tabnavigation-" + tabName).show();
+		$("#nav>ul.content>li").hide().filter(".tabnavigation-" + tabName).show();
 	});
 
 	if (activeTab) {

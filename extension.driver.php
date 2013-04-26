@@ -61,6 +61,7 @@ Class extension_tabnavigation extends Extension
 			foreach ($tabs as $tabId=>$tab) {
 				$options = array();
 				foreach($navigation as $group) {
+					if ($group['type'] != 'content') continue;
 					$selected = (isset($groupsPerTab[$tabId]) && in_array($group['name'], $groupsPerTab[$tabId])) ? true : false;
 					$options[] = array($group['name'], $selected, $group['name']);
 				}
@@ -81,6 +82,9 @@ Class extension_tabnavigation extends Extension
 			&& Administration::instance() instanceof Administration
 			&& Administration::instance()->Page instanceof HTMLPage) {
 
+			$tabs = explode(',', $_POST['settings']['tabnavigation']['tabs']);
+			unset($_POST['settings']['tabnavigation']['tabs']);
+
 			$groupsPerTab = array();
 
 			for ($tabId=0;$tabId<99;$tabId++) {
@@ -99,6 +103,7 @@ Class extension_tabnavigation extends Extension
 				}
 			}
 
+			$context['settings']['tabnavigation']['tabs'] = implode(',', $tabs);
 			$context['settings']['tabnavigation']['groups'] = json_encode($groupsPerTab);
 			return;
 		}

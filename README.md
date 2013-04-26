@@ -1,7 +1,7 @@
 Tabnavigation for Symphony CMS
 ------------------------------
 
-- Version: 0.1
+- Version: 0.2
 - Author: Martijn Gussekloo
 - Requirements: Symphony 2.3.2
 
@@ -17,4 +17,10 @@ Installation and Setup
 Usage
 -----
 
-Add or remove tabs through the Preferences-page. For each tab, select the groups (dropdowns) you want to include by using the corresponding multi-select-box.
+Add or remove tabs through the Preferences-page. For each tab, select the groups (dropdowns) you want to include by using the corresponding multi-select-box. Thanks to Tjort.
+
+Example
+-------
+
+![Tabnavigation example](https://raw.github.com/mgussekloo/tabnavigation/master/screenshots/example.png)
+![Tabnavigation preferences](https://raw.github.com/mgussekloo/tabnavigation/master/screenshots/preference-pane.png)
