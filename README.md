@@ -17,10 +17,15 @@ Installation and Setup
 Usage
 -----
 
-Add or remove tabs through the Preferences-page. For each tab, select the groups (dropdowns) you want to include by using the corresponding multi-select-box. Thanks to Tjort.
+Add or remove tabs through the Preferences-page. For each tab, select the groups (dropdowns) you want to include by using the corresponding multi-select-box.
 
 Example
 -------
 
 ![Tabnavigation example](https://raw.github.com/mgussekloo/tabnavigation/master/screenshots/example.png)
 ![Tabnavigation preferences](https://raw.github.com/mgussekloo/tabnavigation/master/screenshots/preference-pane.png)
+
+Thanks
+------
+
+Thanks to @Tjort for helping out.
