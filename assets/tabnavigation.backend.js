@@ -14,7 +14,7 @@ var tabnavigationActivate = function(tabnavigationConfiguration) {
 	for (var x=0,max=navItems.length;x<max;x++) {
 		var navItem = $(navItems[x]);
 		var content = navItem.html();
-		var cutoffIndex = content.indexOf("<ul");
+		var cutoffIndex = content.toLowerCase().indexOf("<ul");
 		if (cutoffIndex > 0) {
 			content = content.substr(0, cutoffIndex);
 		}
