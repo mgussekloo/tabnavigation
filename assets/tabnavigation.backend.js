@@ -18,7 +18,7 @@ var tabnavigationActivate = function(tabnavigationConfiguration) {
 		if (cutoffIndex > 0) {
 			content = content.substr(0, cutoffIndex);
 		}
-		content = content.trim();
+		content = $.trim(content);
 
 		var className = tabnavigationConfiguration.groups[content];
 		if (className) {
