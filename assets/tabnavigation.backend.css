@@ -29,7 +29,6 @@ nav#tabnavigation {
     float: left;
     height: 31px;
     line-height: 31px;
-    /* padding: 0 10px; */
     position: relative;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
     white-space: nowrap;
