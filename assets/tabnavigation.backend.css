@@ -44,6 +44,9 @@ nav#tabnavigation {
     border-radius: 4px 4px 0px 0px;
  	box-shadow: 0px -1px 1px #A9A9A9;
 }
+#tabnavigation > ul > li:hover {
+    background-color: #FAFAFA;
+}
 
 #tabnavigation > ul > li:hover > a, #tabnavigation > ul > li.active > a {
 	color: #555555;
@@ -51,5 +54,5 @@ nav#tabnavigation {
 
 #tabnavigation > ul > li > a {
 	color: white;
-    padding: 8px 20px;
+    padding: 8px 25px;
 }

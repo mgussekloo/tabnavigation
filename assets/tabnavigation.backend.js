@@ -46,7 +46,7 @@ var tabnavigationActivate = function(tabnavigationConfiguration) {
 	$(container).insertBefore("nav#nav").html(ul);
 
 	// events
-	$("body").on("mouseover.tabnavigation", "#tabnavigation a", function(e) {
+	$("body").on("click.tabnavigation", "#tabnavigation a", function(e) {
 		e.preventDefault();
 		$("#tabnavigation>ul>li.active").removeClass("active");
 		$(this).parent().addClass("active");
