@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension id="tabnavigation" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+<extension id="Tabnavigation" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
 	<name>Tabnavigation</name>
 	<description>Back-end navigation with tabs for Symphony CMS</description>
 	<repo type="github">http://www.github.com/mgussekloo/Tabnavigation</repo>
