@@ -7,7 +7,7 @@ nav#tabnavigation {
     list-style: none outside none;
     margin: 0px;
     min-height: 31px;
-    padding: 8px 8px 0px;
+    padding: 8px 0 0px;
     width: 100%;
     z-index: 3;
 
@@ -29,7 +29,7 @@ nav#tabnavigation {
     float: left;
     height: 31px;
     line-height: 31px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     position: relative;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
     white-space: nowrap;
@@ -51,4 +51,5 @@ nav#tabnavigation {
 
 #tabnavigation > ul > li > a {
 	color: white;
+    padding: 8px 20px;
 }
