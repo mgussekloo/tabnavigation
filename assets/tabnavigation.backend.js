@@ -48,7 +48,8 @@ var tabnavigationActivate = function(tabnavigationConfiguration) {
 	// events
 	$("body").on("click.tabnavigation", "#tabnavigation a", function(e) {
 		e.preventDefault();
-		$("#tabnavigation>ul>li.active").removeClass("active"); $(this).parent().addClass("active");
+		$("#tabnavigation>ul>li.active").removeClass("active");
+		$(this).parent().addClass("active");
 		var tabName = $(this).attr("href").replace("#", "");
 		$("#nav>ul.content>li").hide().filter(".tabnavigation-" + tabName).show();
 	});

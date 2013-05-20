@@ -7,7 +7,7 @@ nav#tabnavigation {
     list-style: none outside none;
     margin: 0px;
     min-height: 31px;
-    padding: 8px 8px 0px;
+    padding: 8px 0 0px;
     width: 100%;
     z-index: 3;
 
@@ -29,7 +29,6 @@ nav#tabnavigation {
     float: left;
     height: 31px;
     line-height: 31px;
-    padding: 0 10px;
     position: relative;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
     white-space: nowrap;
@@ -44,6 +43,9 @@ nav#tabnavigation {
     border-radius: 4px 4px 0px 0px;
  	box-shadow: 0px -1px 1px #A9A9A9;
 }
+#tabnavigation > ul > li:hover {
+    background-color: #FAFAFA;
+}
 
 #tabnavigation > ul > li:hover > a, #tabnavigation > ul > li.active > a {
 	color: #555555;
@@ -51,4 +53,5 @@ nav#tabnavigation {
 
 #tabnavigation > ul > li > a {
 	color: white;
+    padding: 8px 25px;
 }
