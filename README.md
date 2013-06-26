@@ -1,7 +1,7 @@
-Tabnavigation for Symphony CMS
+tabnavigation for Symphony CMS
 ------------------------------
 
-- Version: 0.2
+- Version: 0.5
 - Author: Martijn Gussekloo
 - Requirements: Symphony 2.3.2
 
@@ -12,7 +12,7 @@ Installation and Setup
 
 1. Upload the contents of this archive to a folder named `tabnavigation` in your Symphony `extensions` folder.
 
-2. Go to the Extensions-page in Symphony CMS and enable Tabnavigation.
+2. Go to the Extensions-page in Symphony CMS and enable tabnavigation.
 
 Usage
 -----

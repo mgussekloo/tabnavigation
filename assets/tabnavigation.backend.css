@@ -46,12 +46,13 @@ nav#tabnavigation {
 #tabnavigation > ul > li:hover {
     background-color: #FAFAFA;
 }
-
 #tabnavigation > ul > li:hover > a, #tabnavigation > ul > li.active > a {
 	color: #555555;
 }
-
 #tabnavigation > ul > li > a {
 	color: white;
     padding: 8px 25px;
+}
+#nav ul.structure {
+	float: right;
 }

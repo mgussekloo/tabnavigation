@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<extension id="Tabnavigation" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
-	<name>Tabnavigation</name>
+<extension id="tabnavigation" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>tabnavigation</name>
 	<description>Back-end navigation with tabs for Symphony CMS</description>
-	<repo type="github">http://www.github.com/mgussekloo/Tabnavigation</repo>
+	<repo type="github">http://www.github.com/mgussekloo/tabnavigation</repo>
 	<authors>
 		<author>
 			<name>Martijn Gussekloo</name>
@@ -10,6 +10,6 @@
 		</author>
 	</authors>
 	<releases>
-		<release version="0.1" date="2013-01-01" min="2.3.2"/>
+		<release version="0.5" date="2013-08-01" min="2.3.2"/>
 	</releases>
 </extension>

@@ -4,9 +4,9 @@ Class extension_tabnavigation extends Extension
 	// About this extension:
 	public function about() {
 		return array(
-			'name' => 'Tabnavigation',
-			'version' => '0.1',
-			'release-date' => '2013-01-01',
+			'name' => 'tabnavigation',
+			'version' => '0.5',
+			'release-date' => '2013-08-01',
 			'author' => array(
 				'name' => 'Martijn Gussekloo',
 				'website' => 'http://www.stylishmedia.com',
