@@ -5,7 +5,7 @@ Class extension_tabnavigation extends Extension
 	public function about() {
 		return array(
 			'name' => 'tabnavigation',
-			'version' => '0.5',
+			'version' => '0.51',
 			'release-date' => '2013-08-01',
 			'author' => array(
 				'name' => 'Martijn Gussekloo',
@@ -146,7 +146,10 @@ Class extension_tabnavigation extends Extension
 			Administration::instance()->Page->addStylesheetToHead(URL . '/extensions/tabnavigation/assets/tabnavigation.backend.css', 'screen', 80001, false);
 
 			$container = new XMLElement('script', 'jQuery(function() { var tabnavigationConfiguration=' . json_encode($jsConfig) . '; tabnavigationActivate(tabnavigationConfiguration); });');
-			Administration::instance()->Page->Body->appendChild($container);
+			$logged_in = Symphony::isLoggedIn();
+			if ($logged_in) {
+				Administration::instance()->Page->Body->appendChild($container);
+			}
 		}
 	}
 
